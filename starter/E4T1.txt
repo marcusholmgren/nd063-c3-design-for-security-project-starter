@@ -2,4 +2,17 @@
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
+To prevent SSH brute force attacks, we can add a few things to our sshd_config file.
+SSH Brute Force Protection - Prevent SSH brute force attacks by limiting the number of failed login attempts.
+
+Limiting the IP address range that can be used to login to the EC2 server.
+Currently, the default is to allow any IP address to login.
+Using a service like https://www.whatismyip.com to get the IP address of the network you are currently connected to would help in securing from where a brute force attack can be launched.
+
+Installing fail2ban to monitor log files for failed login attempts and then blocks the attempts after a few failed attempts.
+<https://aws.amazon.com/premiumsupport/knowledge-center/ec2-ssh-best-practices/>
+
+
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+The Secret Recipe Value S3 bucket should have a IAM policy that only allows access to the bucket from the users that are in the priveleged business users group.
