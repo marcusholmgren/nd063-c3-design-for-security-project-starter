@@ -1,0 +1,9 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+
+The Secret Recipe Vault S3 bucket should have a IAM policy that only allows access to the bucket from the users that are in the privileged business users group.
+
+# Poor practice 2
+
+At least S3 bucket encryption should be enabled for the Secret Recipe Vault to protect the data from being read by anyone.
