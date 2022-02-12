@@ -1,3 +1,18 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
+The Amazon Inspector found that both UDP and TCP ports for Telnet, FTP, and SSH are reachable from the internet.
+
+Security Hub recommends that:
+- http headers should be dropped.
+- HTTP traffic should be redirected to HTTPS.
+- S3 buckets should use SSL (Secure Socket Layer) encryption for requests.
+- S3 bucket should have server side encryption enabled.
+- S3 bucket should have access logging enabled.
+- S3 secret bucket should have bucket level public access restricted to group.
+- EC2 instances should be managed by AWS Systems Manager
+
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+- S3 enable bucket encryption.
+- Remove VPC security group for WebAppSG that allows all ports to be open.
+- Add AWS WAF to protect the Load Balancer
