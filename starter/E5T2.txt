@@ -1,13 +1,35 @@
 # Identify tools that will allow you to do the following:
 
+Amazon provides a few tools to help you with this.
+CodeGuru can be used both in development and help withh code reviews to detect critical issues, and security vulnerabilities.
+The other thing it can do is profile code to understand where expensive and inefficient code is located.
+
+Snyke is a company that provides tools for both container scanning and infrastructure as code checks.
+
 ## Scan infrastructure as code templates
 
+I added Snyke Infrastrucutre as Code scanning to my pipeline.
+<https://snyk.io/product/infrastructure-as-code-security/>
+
 ### Example vulnerability
+
+Terraform files that contain sensitive information. Or permissions that are too open.
 
 ##Scan AMI’s or containers for OS vulnerabilities
 
+I added Snyk Container Scanning to my pipeline.
+<https://snyk.io/product/container-security/>
+
 ### Example vulnerability
+
+Vulnerabilities when creating containers does not only occur at build time, but also at runtime.
+Third party dependencies might have security vulnerabilities that are only discovered weeks after deployment.
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
 
+AWS GuardDuty is a service that can be used to detect and protect against security vulnerabilities in your AWS environment.
+
 ### Example vulnerability
+
+IAM policies that are to open and allows too much access. Changes to polices to make the less restrictive.
+Disable 2FA and change passwords.
