@@ -12,6 +12,8 @@ Using a service like https://www.whatismyip.com to get the IP address of the net
 Installing fail2ban to monitor log files for failed login attempts and then blocks the attempts after a few failed attempts.
 <https://aws.amazon.com/premiumsupport/knowledge-center/ec2-ssh-best-practices/>
 
+Also getting the GuardDuty service working would be a good idea. Follow this article to get the service working.
+<https://aws.amazon.com/premiumsupport/knowledge-center/identify-attacks-with-guardduty/>
 
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
 
