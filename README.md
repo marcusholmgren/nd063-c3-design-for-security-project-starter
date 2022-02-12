@@ -136,16 +136,21 @@ You can get these from the Outputs section of the **c3-app** stack.
  
 #### 3.  Upload data to S3 buckets
 Upload the free recipes to the free recipe S3 bucket from step 2. Do this by typing this command into the console (you will replace `<BucketNameRecipesFree>` with your bucket name):
+
+List S3 bucket that contains recipes in name:
+```sh
+aws s3 ls | grep ".*recipes.*"
+```
  
 Example:  
-```
+```sh
 aws s3 cp free_recipe.txt s3://<BucketNameRecipesFree>/ --region us-east-1
 ```
  
 Upload the secret recipes to the secret recipe S3 bucket from step 2. Do this by typing this command into the console (you will replace `<BucketNameRecipesSecret>` with your bucket name):
  
 Example:  
-```
+```sh
 aws s3 cp secret_recipe.txt s3://<BucketNameRecipesSecret>/ --region us-east-1
 ```
  
