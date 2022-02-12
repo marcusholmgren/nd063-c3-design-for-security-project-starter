@@ -1,3 +1,18 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
 
+- I use the provided instance of AWS from Udacity and no CloudWatch exists for any of the EC2 instances.
+Therefore, did not GuardDuty detect any brute force attack against the Web Service Instance
+
+The E3-screenshots folder contains three images:
+- E3T1_guardduty.png - GuardDuty Findings view and CloudWatch EC2 activity view.
+- E3T2_hhydra_attack_console.png - terminal session showing Hydra attack on Web Service Instance.
+- E3T2_s3breach.png - terminal session showing access and content of secret recipe.
+
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+To my understanding the source seems to be CloudWatch logs
+
+
+I found this article how to defend against SSH brute force attacks with GuardDuty:
+
+<https://aws.amazon.com/premiumsupport/knowledge-center/identify-attacks-with-guardduty/>
